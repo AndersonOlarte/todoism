@@ -54,7 +54,7 @@ jobs:
 
             - name: Install dependencies
               run: |
-                echo $WORKING_DIR
+                ls -al
                 cd $WORKING_DIR
                 npm ci
 
