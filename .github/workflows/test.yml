@@ -65,7 +65,7 @@ jobs:
               run: |
                 cd $WORKING_DIR
                 echo "Ejecución de pruebas en todo LIST"
-                npx playwright test todolist.spec.ts --trace on --timeout=60000  # Timeout de 60 segundos
+                npx playwright test todotesting.spec.ts --trace on --timeout=60000
 
             - name: Run Playwright tests for the third time and evaluate
               run: |
