@@ -8,7 +8,7 @@ on:
             - master
 env:
     REPO_URL: https://github.com/AndersonOlarte/CursoTestingReto4.git
-    WORKING_DIR: todoism/CursoTestingReto
+    WORKING_DIR: todoism/CursoTestingReto4
 jobs:
     run-tests:
         runs-on: ubuntu-latest
