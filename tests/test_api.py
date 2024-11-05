@@ -23,7 +23,7 @@ class APITestCase(unittest.TestCase):
         self.client = app.test_client()
 
         user = User(username='grey')
-        user.set_password('123') 
+        user.set_password('123')
         item = Item(body='Test Item', author=user)
 
         user2 = User(username='li')
