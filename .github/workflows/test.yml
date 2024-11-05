@@ -55,7 +55,7 @@ jobs:
             - name: Install dependencies
               run: |
                 cd $WORKING_DIR
-                npm ci
+                npm i
 
             - name: Install Playwright Browsers
               run: npx playwright install --with-deps
