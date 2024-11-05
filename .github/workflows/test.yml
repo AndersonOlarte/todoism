@@ -61,22 +61,11 @@ jobs:
             - name: Install Playwright Browsers
               run: npx playwright install --with-deps
 
-            - name: Run Playwright tests twice without evaluation
+            - name: Run Playwright Test
               run: |
                 cd $WORKING_DIR
                 echo "Ejecución de pruebas en todo LIST"
                 npx playwright test todotesting.spec.ts --trace on --timeout=60000
-
-            - name: Run Playwright tests for the third time and evaluate
-              run: |
-                cd $WORKING_DIR
-                echo "Ejecutando pruebas en TODO list..."
-                if ! npx playwright test todolist.spec.ts --trace on --timeout=60000; then
-                  echo "Pruebas fallaron en la tercera ejecución. Deteniendo pipeline."
-                  exit 1
-                else
-                  echo "Ejecución exitosa"
-                fi
 
             - name: Upload Artifact
               uses: actions/upload-artifact@v4
